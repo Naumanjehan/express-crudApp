@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import axios from 'axios'
 
 
-const API_URL = 'http://localhost:3000/api/user'
+const API_URL = 'http://localhost:3000/api/user';
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
  const [updateUser, setUpdateUser] = useState({ id: '', name: '' });
 
  async function fetchUsers(){
-    const response = await axios.get(API_URL)
+    const response = await axios.get(API_URL);
     const content = response.data 
     
     setUsers(content.data)
