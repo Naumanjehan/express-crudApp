@@ -18,7 +18,7 @@ app.post('/api/user', (req, res) =>{
     const user = req.body;
     const newUser = {
         id: users.length + 1,
-        ...user
+        ...user,
     }
     users.push(newUser)
     res.status(200).json({message : "created new user", data: newUser})
